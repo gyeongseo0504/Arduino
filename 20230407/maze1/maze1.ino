@@ -28,16 +28,6 @@ float right_sonar = 0.0;
 
 
 
-
-
-//////////////// L298 /////////////////////
-#define ENA 8
-#define IN1 9
-#define IN2 10
-#define IN3 11
-#define IN4 12
-#define ENB 13
-
 //////////////////////////////Mazer status/////////////////////
 int maze_status = 0;
 
@@ -45,92 +35,8 @@ int maze_status = 0;
 
 void setup()
 {
-  // put your setup code here, to run once:
-  /*
-  pinMode (TRIG1, OUTPUT);
-  pinMode (ECHO1,  INPUT);
-  pinMode (TRIG2, OUTPUT);
-  pinMode (ECHO2,  INPUT);
-  pinMode (TRIG3, OUTPUT);
-  pinMode (ECHO3,  INPUT);
-*/
-  pinMode(ENA, OUTPUT);
-  pinMode(IN1, OUTPUT);
-  pinMode(IN2, OUTPUT);
-
-  pinMode(IN3, OUTPUT);
-  pinMode(IN4, OUTPUT);
-  pinMode(ENB, OUTPUT);
-
   Serial.begin(115200); // 통신속도를 115200으로 정의함
 
-}
-long sonar_front(void) // 초음파 센서 1번 측정 함수
-{
-  long duration1, distance1
-  ;
-  digitalWrite(TRIG1, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG1, LOW);
-  
-  duration1 = pulseIn(ECHO1, HIGH);
-  distance1 = ((float)(340 * duration1) / 1000) / 2;
-  return distance1;
-}
-
-long sonar2(void) // 초음파 센서 2번 측정 함수
-{
-  long duration2, distance2;
-  digitalWrite(TRIG2, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG2, LOW);
-  
-  duration2 = pulseIn(ECHO2, HIGH);
-  distance2 = ((float)(340 * duration2) / 1000) / 2;
-  return distance2;
-}
-
-long sonar3(void) // 초음파 센서 3번 측정 함수
-{
-  long duration3, distance3;
-  digitalWrite(TRIG3, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(TRIG3, LOW);
-  duration3 = pulseIn(ECHO3, HIGH);
-  distance3 = ((float)(340 * duration3) / 1000) / 2;
-  return distance3;
-}
-
-void motor_A_control(int direction_a, int motor_speed_a) //모터 A의 방향 (direction)과 속도(speed)제어
-{
-  if(direction_a == HIGH)
-  {
-    digitalWrite(IN1,LOW);           //모터의 방향 제어
-    digitalWrite(IN2,HIGH);
-    analogWrite(ENA,motor_speed_a);   //모터의 속도 제어
-  }
-  else
-  {
-    digitalWrite(IN1,HIGH);
-    digitalWrite(IN2,LOW);
-    analogWrite(ENA,motor_speed_a);
-  }
-}
-void motor_B_control(int direction_b, int motor_speed_b) //모터 B의 방향 (direction)과 속도(speed)제어
-{
-  if(direction_b == HIGH)
-  {
-    digitalWrite(IN3,LOW);           //모터의 방향 제어
-    digitalWrite(IN4,HIGH);
-    analogWrite(ENB,motor_speed_b);  //모터의 속도 제어
-  }
-  else
-  {
-   
-    digitalWrite(IN3,HIGH);
-    digitalWrite(IN4,LOW);
-    analogWrite(ENB,motor_speed_b);
-  }
 }
 
 void check_maze_status(void)
@@ -174,6 +80,7 @@ void loop()
   front_sonar = sonar[Front].ping_cm()*10;  //전방센서 측정
   left_sonar = sonar[Left].ping_cm()*10;     //좌측 센서 측정
   right_sonar = sonar[Right].ping_cm()*20;    //우측 센서 측정
+  
   if(front_sonar == 0.0)   front_sonar = MAX_DISTANCE*10;   //0.0출력이 최대값이므로
   if(left_sonar  == 0.0)   left_sonar = MAX_DISTANCE*10;
   if(right_sonar == 0.0)   right_sonar = MAX_DISTANCE*10;
