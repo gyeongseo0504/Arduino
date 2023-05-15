@@ -15,7 +15,6 @@ int main(void)
     scanf("%d", &Input_Target_Angle);
 
     Error = Input_Target_Angle - Input_Current_Angle;
-    Corrected_Error = -360 + Error;
 
     printf("o.Error  : %d = %d - %d \n", Error, Input_Target_Angle, Input_Current_Angle);
 
@@ -24,31 +23,31 @@ int main(void)
     if (Error < 180 && Error >0)
     {
         Corrected_Error = Input_Target_Angle - Input_Current_Angle;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
     else if (Error > 180)
     {
         Corrected_Error = Error - 360;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
     else if (Error < 0 && Error > -180)
     {
         Corrected_Error = Error;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
     else if (Error < -180 && Error > -360)
     {
         Corrected_Error = 360 + Error;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
     else if (Error == 0 || Error == 360 || Error == -360)
     {
         Corrected_Error = 0;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
     else if (Error == 180 || Error == -180)
     {
         Corrected_Error = 180;
-        printf("Corrected Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
+        printf("c.Error  : %d  =  %d  -  %d", Corrected_Error, Input_Target_Angle, Input_Current_Angle);
     }
 }
