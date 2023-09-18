@@ -233,15 +233,23 @@ void loop()
   //전진
   motor_A_control(HIGH,100);  //오른쪽 전진
   motor_B_control(LOW,100);  //왼쪽은 전진
-  delay(1000);
+  delay(900);
   motor_A_control(HIGH,0);  //오른쪽 전진
   motor_B_control(LOW,0);  //왼쪽은 전진
   delay(1000);
   //회전
+  motor_A_control(HIGH,120);  //오른쪽 전진
+  motor_B_control(HIGH,150);  //왼쪽은 전진
+  delay(1000);
+  motor_A_control(HIGH,100);  //오른쪽 전진
+  motor_B_control(LOW,100);  //왼쪽은 전진
+  delay(1000);
+  motor_A_control(HIGH,0);  //오른쪽 전진
+  motor_B_control(LOW,0);  //왼쪽은 전진
+  delay(1000);
   const double odom_left = cnt1 * pulse_to_distance_left;
   const double odom_right = cnt2 * pulse_to_distance_right;
 
-  delay(1000);
   
   
   /*Serial.print(cnt1); Serial.print("cnt1:   ");
