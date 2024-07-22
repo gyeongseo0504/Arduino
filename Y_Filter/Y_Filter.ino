@@ -32,9 +32,9 @@ int Steering_Angle;
 int Steering_Angle_Control;
 float Filter_Steering_Angle;
 
-float Kp_Steer         = 0.2;
+float Kp_Steer         = 3.5;
 float Ki_Steer         = 0.0;
-float Kd_Steer         = 0.5;
+float Kd_Steer         = 7.5;
 
 float error            = 0.0;
 float error_s          = 0.0;
@@ -219,9 +219,9 @@ void loop()
 {
   Steering_Angle_Print();
   
-  steer_motor_control(0);
+  //steer_motor_control(0);
   target_angle = 465;
   target_angle_limit();
   
-  motor_control(120);
+  motor_control(0);
 }

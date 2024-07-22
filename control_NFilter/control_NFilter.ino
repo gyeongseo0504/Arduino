@@ -47,9 +47,9 @@ MotorData MD;
 #define STEERING_ANGLE_PIN          A0
 #define STEERING_ANGLE_CONTROL_PIN  A2
 
-#define NEURAL_ANGLE               465
-#define LEFT_STEER_ANGLE           550
-#define RIGHT_STEER_ANGLE          370
+#define NEURAL_ANGLE               448
+#define LEFT_STEER_ANGLE           560
+#define RIGHT_STEER_ANGLE          350
 
 #define Max_Speed                  240
 
@@ -58,9 +58,11 @@ MotorData MD;
 int Steering_Angle;
 int Steering_Angle_Control;
 
-float Kp_Steer         = 3.5;
+float Kp_Steer         = 3.0;
 float Ki_Steer         = 0.0;
-float Kd_Steer         = 7.0;
+float Kd_Steer         = 5.0;
+//3.5 7.5
+//
 
 float error            = 0.0;
 float error_s          = 0.0;
@@ -220,32 +222,36 @@ void Sbus_motor_control()
 
     sbus_tx.data(data);
     sbus_tx.Write();
-
-    if (data.ch[1] >= Sbus_Speed_zero)
-    {
-      MD.motor_speed = map(data.ch[1], Sbus_Speed_zero, Sbus_Speed_min, 0, -200);
-    }
-    else
-    {
-      MD.motor_speed = map(data.ch[1], Sbus_Speed_max, Sbus_Speed_zero, 200, 0);
-    }
     /*
-        if (data.ch[0] > Sbus_str_zero)
+        if (data.ch[1] >= Sbus_Speed_zero)
         {
-          MD.str_position = map(data.ch[0], Sbus_str_zero, Sbus_str_min, 0, -10000);
+          MD.motor_speed = map(data.ch[1], Sbus_Speed_zero, Sbus_Speed_min, 0, -200);
         }
         else
         {
-          MD.str_position = map(data.ch[0], Sbus_str_max, Sbus_str_zero, 10000, 0);
+          MD.motor_speed = map(data.ch[1], Sbus_Speed_max, Sbus_Speed_zero, 200, 0);
         }
     */
-    if (data.ch[0] > Sbus_str_zero)
+    if (data.ch[1] >= Sbus_Speed_zero + 30)
     {
-      MD.str_position = map(data.ch[0], Sbus_str_min, Sbus_str_zero, 550, 463);
+      MD.motor_speed = map(data.ch[1], Sbus_Speed_zero, Sbus_Speed_min, 0, -50);
+    }
+    else if (data.ch[1] < Sbus_Speed_zero - 30)
+    {
+      MD.motor_speed = map(data.ch[1], Sbus_Speed_max, Sbus_Speed_zero, 50, 0);
     }
     else
     {
-      MD.str_position = map(data.ch[0], Sbus_str_zero, Sbus_str_max, 463, 370);
+      MD.motor_speed = 0;
+    }
+
+    if (data.ch[0] > Sbus_str_zero)
+    {
+      MD.str_position = map(data.ch[0], Sbus_str_min, Sbus_str_zero, 560, 448);
+    }
+    else
+    {
+      MD.str_position = map(data.ch[0], Sbus_str_zero, Sbus_str_max, 448, 350);
     }
 
     //Serial.println(motor_speed);
@@ -274,6 +280,7 @@ void Steering_Angle_Print(void)
   Serial.println(Steering_Angle);
   //Serial.print("Steering_Angle_Control: ");
   //Serial.println(Steering_Angle_Control);
+
   Serial.print("steering_control: ");
   Serial.println(steering_control);
   Serial.print("target_angle: ");
@@ -294,7 +301,7 @@ void loop()
   //Steering_Angle_Print();
 
   //steer_motor_control(0);
-  //target_angle = 463;
+  //target_angle = 448;
   target_angle_limit();
 
   //motor_control(0);

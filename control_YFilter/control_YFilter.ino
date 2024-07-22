@@ -135,7 +135,7 @@ void setup()
   /* SBUS 통신 시작 */
   sbus_rx.Begin();
   sbus_tx.Begin();
-  
+
   Ms2Timer_setup();
 
   Serial.begin(115200);
@@ -300,13 +300,13 @@ void Steering_Angle_Print(void)
   Serial.println(target_angle);
   Serial.print("Filter_Steering_Angle: "); // 필터링된 조향각 출력
   Serial.println(Filter_Steering_Angle);
-  
+
   Serial.print("\n");
 }
 
 void control_steering(void)
 {
-    joy_contorl();
+  joy_contorl();
   read_Potentiometer();
   //target_angle_limit();
   PID_Control();
@@ -315,10 +315,10 @@ void control_steering(void)
 void loop()
 {
   //Steering_Angle_Print();
-  
+
   //steer_motor_control(0);
   //target_angle = 465;
   target_angle_limit();
-  
+
   //motor_control(0);
 }
