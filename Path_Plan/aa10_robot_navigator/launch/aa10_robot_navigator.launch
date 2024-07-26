@@ -1,0 +1,14 @@
+<launch>
+
+   <!-- <node pkg="tf" type="static_transform_publisher" name="base_scan_base_link_tf" args= "0.5 0.0 0.3 0.0 0.0 0.0  base_link base_scan 10" />-->
+	
+	<node pkg="aa10_robot_navigator" type="aa10_robot_navigator_node" name="aa10_robot_navigator_node" output="screen">
+
+			
+			<param name = "mission_flag" 					type = "int" 				value = "9"/>
+			<param name = "obs_distance" 					type = "double" 				value = "1.55"/>
+	</node>
+
+
+</launch>
+

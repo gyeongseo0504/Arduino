@@ -1,0 +1,25 @@
+<launch>
+
+   <!-- <node pkg="tf" type="static_transform_publisher" name="base_scan_base_link_tf" args= "0.5 0.0 0.3 0.0 0.0 0.0  base_link base_scan 10" />-->
+	
+	<node pkg="lidar_rack_detect" type="lidar_rack_detect_node" name="lidar_rack_detect_node" output="screen">
+			 
+			 
+			<param name = "lidar2d_cloud_topic"             type = "string"   			value = "/pointcloud2d"/>
+			<param name = "imu_topic"                		type = "string"   			value = "/imu/data"/>
+			
+			<param name = "front_obstacle_distance_topic	type = "string"   			value = "/lidar/front_obstacle_distance"/>
+			
+			<param name = "Robot_Width"              		type = "double"   			value = "0.6"/> 
+			<param name = "sensitivity"               		type = "int"   				value = "400"/>
+		
+			<param name = "min_blob_area"            		type = "int"   				value = "400"/>
+			<param name = "max_blob_area"              		type = "int"   				value = "700"/>
+
+			
+			
+	</node>
+
+
+</launch>
+
