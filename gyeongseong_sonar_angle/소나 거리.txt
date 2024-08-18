@@ -1,0 +1,179 @@
+0도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 320.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 340.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 310.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 340.00
+Angle : -1.57 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 320.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 340.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 310.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 330.00
+Angle : -3.14 degrees
+
+5도
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 330.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 320.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 330.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 320.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 330.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 320.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 320.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 320.00
+
+
+10도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 380.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 300.00
+Angle : 2.93 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 380.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 300.00
+Angle : 2.93 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 380.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 300.00
+Angle : 2.93 degrees
+
+15도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 370.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 290.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 310.00
+Left_Rear_Sonar : 370.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 290.00
+Angle : 1.44 degrees
+
+Left_Front_Sonar : 310.00
+Left_Rear_Sonar : 370.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 290.00
+
+
+20도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 410.00
+Right_Front_Sonar : 360.00
+Right_Rear_Sonar: 250.00
+Angle : -2.42 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 410.00
+Right_Front_Sonar : 360.00
+Right_Rear_Sonar: 250.00
+Angle : -2.42 degrees
+
+-5도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 270.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 380.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 270.00
+Right_Front_Sonar : 340.00
+Right_Rear_Sonar: 380.00
+Angle : -1.48 degrees
+
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 270.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 380.00
+Angle : 0.00 degrees
+
+
+
+-10도
+Left_Front_Sonar : 320.00
+Left_Rear_Sonar : 300.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 350.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 300.00
+Right_Front_Sonar : 320.00
+Right_Rear_Sonar: 340.00
+Angle : -1.54 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 300.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 350.00
+
+-15도
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 250.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 400.00
+Angle : -1.35 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 250.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 400.00
+Angle : -1.35 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 250.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 400.00
+
+
+
+-20도
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 240.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 420.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 240.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 420.00
+Angle : 0.00 degrees
+
+Left_Front_Sonar : 330.00
+Left_Rear_Sonar : 240.00
+Right_Front_Sonar : 330.00
+Right_Rear_Sonar: 420.00
+
